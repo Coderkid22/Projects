@@ -1,0 +1,29 @@
+html {
+    font-family: sans-serif;
+}
+
+body {
+    width: 50%;
+    max-width: 800px;
+    min-width: 480px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #5a5a5a;
+}
+
+.form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.guessSubmit {
+    margin-left: 10px;
+}
+
+.resultParas p {
+    padding: 15px;
+    display: inline-block;
+}
