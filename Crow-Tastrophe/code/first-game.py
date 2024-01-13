@@ -158,8 +158,7 @@ def main(WIDTH, HEIGHT):
 
         pygame.display.update()
         clock.tick(FPS)
-class a():
-    pass
+
 main(WINDOW_WIDTH, WINDOW_HEIGHT)
 # display_image(variables['start_button'], variables['start_buttonRectangle'])
             # keys = pygame.key.get_pressed()
