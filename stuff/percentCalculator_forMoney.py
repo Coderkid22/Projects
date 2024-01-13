@@ -17,4 +17,4 @@ for item1_Price, item2_Price in questionsList.items():
     totalWithTax = round(totalPrice + tax, 2)
     # change = round(moneyUsed - totalWithTax, 2)
     with open("answers.txt", "a") as file:
-       file.write(f'Subtotal : {totalPrice} | Taxes : {tax} | Total Cost : {totalWithTax}\n')
+       file.write(f'Subtotal : {totalPrice} | Taxes : {tax} | Total Cost : {totalWithTax}\n') 
