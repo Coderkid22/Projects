@@ -1,6 +1,4 @@
-import sys
-import os
-import math
+import os, sys, math
 
 stdout = sys.stdout
 sys.stdout = open(os.devnull, 'w')
@@ -14,10 +12,9 @@ def main(WIDTH, HEIGHT):
     JUMPHEIGHT = -21
     FPS = 60
     clock = pygame.time.Clock()
-    fontFuture = pygame.font.Font('font(s)/KarmaFuture.otf', 50)
-    fontSuture = pygame.font.Font('font(s)/KarmaSuture.otf', 50)
-    fontSuture_ForGameOver_Text = pygame.font.Font('font(s)/KarmaFuture.otf', 150)
-    fontSuture_ForTimeAlive = pygame.font.Font('font(s)/KarmaFuture.otf', 50)
+    fontFuture = pygame.font.Font('Crow-Tastrophe/font(s)\KarmaFuture.otf', 50)
+    fontSuture = pygame.font.Font('Crow-Tastrophe/font(s)\KarmaSuture.otf', 50)
+    fontSuture_ForGameOver_Text = pygame.font.Font('Crow-Tastrophe/font(s)\KarmaFuture.otf', 150)
 
     player_gravity = 0
     run_whileLoop = True
@@ -41,15 +38,15 @@ def main(WIDTH, HEIGHT):
         currentTime = pygame.time.get_ticks() // 1000 - timeAlive
         color = (64, 64, 64)   
         colorForGameOver = (231, 76, 60)
-        TimeAlive_Text = fontSuture_ForTimeAlive.render(f'Time Alive : {currentTime}s', False, color)
+        TimeAlive_Text = fontSuture.render(f'Time Alive : {currentTime}s', False, color)
         TimeAlive_TextRectangle = TimeAlive_Text.get_rect(center = (400, 75))
         display_image(TimeAlive_Text, TimeAlive_TextRectangle)
 
         return currentTime
 
     def surfaces():
-        runningGame_background = imageLoad('images/Sky.png', False)
-        ground = imageLoad('images/ground.png', False)
+        runningGame_background = imageLoad('Crow-Tastrophe\images\Sky.png', False)
+        ground = imageLoad('Crow-Tastrophe\images\ground.png', False)
         topOfGround = HEIGHT - ground.get_size()[1]
 
         # scoreSuture = fontFuture.render('SCORE', False, (64, 64, 64))
@@ -66,18 +63,18 @@ def main(WIDTH, HEIGHT):
         gameName = fontSuture.render('CROW-TASTROPHE', False, (55, 55, 55))
         gameName_Rectangle = gameName.get_rect(center = (400, 500))
 
-        retry_button = imageLoad('images/gameState_assets/retry_button.png', True)
+        retry_button = imageLoad('Crow-Tastrophe\images\gameState_assets/retry_button.png', True)
         # retry_button = 'soon to be used'
         retry_buttonRectangle = retry_button.get_rect(center = (400, 600))
 
-        lizard = imageLoad('images/lizard/lizard (1).png', True)
+        lizard = imageLoad('Crow-Tastrophe\images/lizard/lizard (1).png', True)
         lizard = pygame.transform.smoothscale(lizard, (99, 100))
         lizardRectangle = lizard.get_rect(midbottom = (704, 681))
         jumpOver_lizardDetection_rectangle = lizard.get_rect()
         lizardRectangle.width = 60
         lizardRectangle.height = 1
 
-        player = imageLoad('images/player/player_walk_1.png', True)
+        player = imageLoad('Crow-Tastrophe\images/player/player_walk_1.png', True)
         player = pygame.transform.smoothscale(player, (90, 120))
         playerRectangle = player.get_rect(midbottom = (80, topOfGround))
         playerRectangle.width = 90
